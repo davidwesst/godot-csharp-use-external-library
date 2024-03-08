@@ -1,0 +1,34 @@
+[gd_scene load_steps=2 format=3 uid="uid://pcyriymsvolj"]
+
+[ext_resource type="Script" path="res://Script/Main.cs" id="1_8xxo8"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_8xxo8")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HSplitContainer" type="HSplitContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+split_offset = 288
+
+[node name="ItemList" type="ItemList" parent="VBoxContainer/HSplitContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/HSplitContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/HSplitContainer/MarginContainer"]
+layout_mode = 2
+bbcode_enabled = true
+text = "<click game to display data>"
